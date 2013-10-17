@@ -1,19 +1,14 @@
 ---
-
-layout: defualt
-
+layout: default
 ---
 
-<h2>Carnivores</h2>
-<ul class="dino-list">
+<h1>Carnivores</h1>
+<ul>
 	{% for dino in site.pages %}
 		{% if dino.category == "carnivore" %}
 			<li>
-			<figure>
-				<img src="img/{{dino.thumb}}" site="">
-				<figcaption{{dino.name}}</figcaption>
-			</figure>
-			{{dino.name}}
+				<img src="{{site.baseurl}}/img/{{dino.thumb}}" alt="Photo of {{dino.name}}">
+				<p>{{dino.name}}</p>
 			</li>
 		{% endif %}
 	{% endfor %}
